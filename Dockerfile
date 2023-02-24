@@ -17,7 +17,7 @@ FROM php:8.0-alpine
 #    && apk del autoconf g++ libtool make pcre-dev
 
 
-
+RUN apk add --no-cache composer
 WORKDIR /app
 COPY . /app
 RUN mv .env.example .env
